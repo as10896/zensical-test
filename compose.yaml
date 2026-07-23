@@ -1,0 +1,8 @@
+services:
+  zensical:
+    image: zensical/zensical
+    volumes:
+      - ./docs:/docs/docs
+      - ./zensical.toml:/docs/zensical.toml
+    ports:
+      - 127.0.0.1:${ZENSICAL_PORT:-8000}:8000
